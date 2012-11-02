@@ -13,9 +13,9 @@ Vagrant::Config.run do |config|
   config.vm.customize ["modifyvm", :id, "--memory", 4096]
 
   config.vm.provision :chef_client do |chef|
-    chef.chef_server_url = "https://api.opscode.com/organizations/opscode-nathen"
-    chef.validation_key_path = "~/.chef/opscode-nathen-validator.pem"
-    chef.validation_client_name = "opscode-nathen-validator"
+    chef.chef_server_url = "https://api.opscode.com/organizations/nathen-training"
+    chef.validation_key_path = ".chef/nathen-training-validator.pem"
+    chef.validation_client_name = "nathen-training-validator"
     chef.node_name = "local-vagrant-office-hours"
   end
 end
